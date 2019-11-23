@@ -1,14 +1,15 @@
 // Tile.vue
 <template>
-  <div class="tile">Here is the tile</div>
+  <div class="tile">{{data.state}}</div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import { TileInterface } from './Tile.stories';
 
 @Component
-export default class HelloWorld extends Vue {
-  @Prop() private state!: string | null;
+export default class Tile extends Vue {
+  @Prop() private data!: TileInterface | null;
 }
 </script>
 
