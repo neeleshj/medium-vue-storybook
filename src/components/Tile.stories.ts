@@ -5,9 +5,9 @@ import { action } from '@storybook/addon-actions';
 import Tile from './Tile.vue';
 
 export enum TileState {
-    EMPTY = -1,
-    NAUGHT = 0,
-    CROSS = 1
+    EMPTY = '',
+    NAUGHT = '0',
+    CROSS = 'X'
 }
 
 export interface TileInterface {

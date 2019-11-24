@@ -1,27 +1,50 @@
 // Tile.vue
 <template>
-  <div class="tile">{{data.state}}</div>
+  <button
+    class="tile"
+    :class="{
+      'tile--blue' : data.state == states.NAUGHT,
+      'tile--red' : data.state == states.CROSS
+      }"
+    @click="selectTile"
+  >{{data.state}}</button>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import { TileInterface } from './Tile.stories';
+import { TileInterface, TileState } from "./Tile.stories";
 
 @Component
 export default class Tile extends Vue {
   @Prop() private data!: TileInterface | null;
+
+  states = TileState;
+
+  selectTile() {
+    this.$emit("selectTile", true);
+  }
 }
 </script>
 
 <style scoped lang="scss">
 .tile {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: blue; //This is just temporary
-  color: white; //So is this
+  color: black;
+  text-align: center;
+  border: 2px #888 solid;
+  font-size: 4rem;
+
+  &--blue {
+    color: blue;
+  }
+
+  &--red {
+    color: red;
+  }
 }
 </style>
