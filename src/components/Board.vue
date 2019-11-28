@@ -17,7 +17,7 @@ import Tile from "./Tile.vue";
   }
 })
 export default class Board extends Vue {
-  @Prop() private data!: Array<TileInterface>;
+  @Prop() data!: Array<TileInterface>;
 
   states = TileState;
 

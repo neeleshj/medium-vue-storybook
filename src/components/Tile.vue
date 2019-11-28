@@ -16,7 +16,7 @@ import { TileInterface, TileState } from "./Tile.stories";
 
 @Component
 export default class Tile extends Vue {
-  @Prop() private data!: TileInterface | null;
+  @Prop() data!: TileInterface | null;
 
   states = TileState;
 
