@@ -7,14 +7,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import { TileInterface, TileState } from "./Tile.stories";
-import Tile from "./Tile.vue";
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import { TileInterface, TileState } from './Tile.stories';
+import Tile from './Tile.vue';
 
 @Component({
   components: {
-    Tile
-  }
+    Tile,
+  },
 })
 export default class Board extends Vue {
   @Prop() data!: Array<TileInterface>;
@@ -22,7 +22,7 @@ export default class Board extends Vue {
   states = TileState;
 
   onSelectTile(tile: TileInterface) {
-    this.$emit("selectBoardTile", tile);
+    this.$emit('selectBoardTile', tile);
   }
 }
 </script>
@@ -33,7 +33,7 @@ export default class Board extends Vue {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    max-width: 365px;
+    max-width: 300px;
   }
 }
 </style>

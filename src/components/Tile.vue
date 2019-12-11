@@ -3,16 +3,18 @@
   <button
     class="tile"
     :class="{
-      'tile--blue' : data.state == states.NAUGHT,
-      'tile--red' : data.state == states.CROSS
-      }"
+      'tile--blue': data.state == states.NAUGHT,
+      'tile--red': data.state == states.CROSS,
+    }"
     @click="selectTile"
-  >{{data.state}}</button>
+  >
+    {{ data.state }}
+  </button>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import { TileInterface, TileState } from "./Tile.stories";
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import { TileInterface, TileState } from './Tile.stories';
 
 @Component
 export default class Tile extends Vue {
@@ -21,7 +23,7 @@ export default class Tile extends Vue {
   states = TileState;
 
   selectTile() {
-    this.$emit("selectTile", true);
+    this.$emit('selectTile', true);
   }
 }
 </script>
@@ -45,6 +47,10 @@ export default class Tile extends Vue {
 
   &--red {
     color: red;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 </style>

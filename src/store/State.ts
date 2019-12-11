@@ -1,13 +1,14 @@
 //index.ts
 
-import { Module, VuexModule, Mutation, Action } from "vuex-module-decorators";
-import { TileInterface } from "@/components/Tile.stories";
-import { emptyData } from "@/components/Board.stories";
-import { defaultText } from "@/components/InfoText.stories";
+import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
+import { TileInterface } from '@/components/Tile.stories';
+import { emptyData } from '@/components/Board.stories';
+import { defaultText } from '@/components/InfoText.stories';
 
-@Module
-export default class SimpleStore extends VuexModule {
-
+@Module({
+  namespaced: true,
+})
+export default class State extends VuexModule {
   //State
   boardState: Array<TileInterface> = emptyData;
   infoText: string = defaultText;
@@ -43,17 +44,17 @@ export default class SimpleStore extends VuexModule {
   }
 
   //Actions
-  @Action({ commit: "setBoardState" })
+  @Action({ commit: 'setBoardState' })
   retBoardState(state: Array<TileInterface>) {
     return state;
   }
 
-  @Action({ commit: "setInfoText" })
+  @Action({ commit: 'setInfoText' })
   retInfoText(text: string) {
     return text;
   }
 
-  @Action({ commit: "setCurrentPlayer" })
+  @Action({ commit: 'setCurrentPlayer' })
   retCurrentPlayer(state: boolean) {
     return state;
   }
