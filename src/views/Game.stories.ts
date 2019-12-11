@@ -9,16 +9,21 @@ import { DefaultText } from '@/components/InfoText.stories';
 
 Vue.use(Vuex);
 export const store = new Vuex.Store({
-  state: {
-    boardState: BoardEmptyData,
-    infoText: DefaultText,
-  },
-  getters: {
-    getBoardState: (state) => {
-      return state.boardState;
-    },
-    getInfoText: (state) => {
-      return state.infoText;
+  modules: {
+    State: {
+      namespaced: true,
+      state: {
+        boardState: BoardEmptyData,
+        infoText: DefaultText,
+      },
+      getters: {
+        getBoardState: (state) => {
+          return state.boardState;
+        },
+        getInfoText: (state) => {
+          return state.infoText;
+        },
+      },
     },
   },
 });
