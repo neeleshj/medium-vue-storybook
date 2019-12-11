@@ -2,16 +2,16 @@
 
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 import { TileInterface } from '@/components/Tile.stories';
-import { emptyData } from '@/components/Board.stories';
-import { defaultText } from '@/components/InfoText.stories';
+import { BoardEmptyData } from '@/components/Board.stories';
+import { DefaultText } from '@/components/InfoText.stories';
 
 @Module({
   namespaced: true,
 })
 export default class State extends VuexModule {
   //State
-  boardState: Array<TileInterface> = emptyData;
-  infoText: string = defaultText;
+  boardState: Array<TileInterface> = BoardEmptyData;
+  infoText: string = DefaultText;
   currentPlayer: boolean = true;
 
   //Getters
