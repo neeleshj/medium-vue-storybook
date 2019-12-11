@@ -34,13 +34,13 @@ export const methods = {
 storiesOf('Board', module)
   .add('Empty Board', () => ({
     components: { Board },
-    template: '<Board :data="emptyData" @selectBoardTile="onSelectTile" />',
+    template: '<Board :data="BoardEmptyData" @selectBoardTile="onSelectTile" />',
     data: () => ({ BoardEmptyData }),
     methods,
   }))
   .add('Not an empty Board', () => ({
     components: { Board },
-    template: '<Board :data="data" @selectBoardTile="onSelectTile" />',
+    template: '<Board :data="BoardWithSelectedData" @selectBoardTile="onSelectTile" />',
     data: () => ({ BoardWithSelectedData }),
     methods,
   }));

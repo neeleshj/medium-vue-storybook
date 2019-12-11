@@ -28,7 +28,7 @@ export const methods = {
 storiesOf('Board Tile', module)
   .add('Empty Tile', () => ({
     components: { Tile },
-    template: `<Tile :data="data" @selectTile="onSelectTile" />`,
+    template: `<Tile :data="TileData" @selectTile="onSelectTile" />`,
     data: () => ({ TileData }),
     methods,
   }))
