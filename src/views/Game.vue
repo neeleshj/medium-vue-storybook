@@ -30,10 +30,11 @@ export default class Game extends Vue {}
 
 <style scoped lang="scss">
 .game {
-  // width: 100%;
-  // display: flex;
-  // justify-content: center;
-  // flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .margin-bottom-4 {
