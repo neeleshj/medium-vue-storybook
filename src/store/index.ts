@@ -1,7 +1,9 @@
-import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators'
-import { TileInterface } from '@/components/Tile.stories';
-import { emptyData } from '@/components/Board.stories'
-import { defaultText } from '@/components/InfoText.stories'
+//index.ts
+
+import { Module, VuexModule, Mutation, Action } from "vuex-module-decorators";
+import { TileInterface } from "@/components/Tile.stories";
+import { emptyData } from "@/components/Board.stories";
+import { defaultText } from "@/components/InfoText.stories";
 
 @Module
 export default class SimpleStore extends VuexModule {
@@ -9,6 +11,7 @@ export default class SimpleStore extends VuexModule {
   //State
   boardState: Array<TileInterface> = emptyData;
   infoText: string = defaultText;
+  currentPlayer: boolean = true;
 
   //Getters
   get getBoardState() {
@@ -16,7 +19,11 @@ export default class SimpleStore extends VuexModule {
   }
 
   get getInfoText() {
-    return this.infoText
+    return this.infoText;
+  }
+
+  get getCurrentPlayer() {
+    return this.currentPlayer;
   }
 
   //Mutations
@@ -30,15 +37,24 @@ export default class SimpleStore extends VuexModule {
     this.infoText = text;
   }
 
+  @Mutation
+  setCurrentPlayer(state: boolean) {
+    this.currentPlayer = state;
+  }
 
   //Actions
-  @Action({ commit: 'setBoardState' })
+  @Action({ commit: "setBoardState" })
   retBoardState(state: Array<TileInterface>) {
     return state;
   }
 
-  @Action({ commit: 'setInfoText' })
+  @Action({ commit: "setInfoText" })
   retInfoText(text: string) {
     return text;
+  }
+
+  @Action({ commit: "setCurrentPlayer" })
+  retCurrentPlayer(state: boolean) {
+    return state;
   }
 }
