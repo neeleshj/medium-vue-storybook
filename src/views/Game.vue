@@ -2,7 +2,7 @@
 <template>
   <div class="game">
     <InfoText class="margin-bottom-4" :data="text" />
-    <Board :data="board" />
+    <Board :data="board" @selectBoardTile="onTileSelected" />
   </div>
 </template>
 
@@ -11,6 +11,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import Board from '@/components/Board.vue';
 import InfoText from '@/components/InfoText.vue';
 import { mapGetters } from 'vuex';
+import { TileInterface, TileState } from '../components/Tile.stories';
 
 @Component({
   components: {
@@ -25,7 +26,42 @@ import { mapGetters } from 'vuex';
     }),
   },
 })
-export default class Game extends Vue {}
+export default class Game extends Vue {
+  /*
+   *  Naughts and Crosses
+   *  currentPlayer will be true initially - this will be the 'Naught' player
+   */
+
+  board!: Array<TileInterface>;
+  currentPlayer!: boolean;
+
+  mount(){
+    
+  }
+
+  checkForWinnder() {
+    // Check for winning combinations
+    // Check if the board is full!
+  }
+
+  onTileSelected(tile: TileInterface) {
+    if (tile.state == TileState.EMPTY) {
+      // Update the tile data
+      let newTile = {
+        ...tile,
+        state: this.currentPlayer ? TileState.NAUGHT : TileState.CROSS,
+        updatedAt: Date.now(),
+      };
+      // Update the board
+      let newBoard = this.board.map((t: TileInterface) => {
+        if (t.id == tile.id) t = tile;
+      });
+      // Send new board data to the store
+    } else {
+      alert('Tile already selected');
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
