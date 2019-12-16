@@ -4,7 +4,7 @@ import Game from './Game.vue';
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { BoardEmptyData } from '@/components/Board.stories';
+import { BoardWithSelectedData } from '@/components/Board.stories';
 import { DefaultText } from '@/components/InfoText.stories';
 
 Vue.use(Vuex);
@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
     State: {
       namespaced: true,
       state: {
-        boardState: BoardEmptyData,
+        boardState: BoardWithSelectedData,
         infoText: DefaultText,
       },
       getters: {
