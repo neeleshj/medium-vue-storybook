@@ -189,6 +189,12 @@ exports[`Storyshots GameView Default 1`] = `
   </div>
    
   <div
+    class="text margin-bottom-4"
+  >
+    Get Ready To Play
+  </div>
+   
+  <div
     class="board"
   >
     <div
