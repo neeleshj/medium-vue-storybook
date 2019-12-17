@@ -2,6 +2,8 @@
 <template>
   <div class="game">
     <InfoText class="margin-bottom-4" :data="text" />
+    <!-- this will cause the snapshot to fail -->
+    <InfoText class="margin-bottom-4" :data="text" />
     <Board :data="board" @selectBoardTile="onTileSelected" />
   </div>
 </template>
