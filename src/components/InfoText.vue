@@ -1,15 +1,14 @@
 //Text.vue
 <template>
-  <div class="text" :class="{'text--large' : largeText}">{{data || 'No Data'}}</div>
+  <div class="text">{{ data || 'No Data' }}</div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({})
 export default class InfoText extends Vue {
   @Prop() data!: string;
-  @Prop() largeText: boolean = false;
 }
 </script>
 

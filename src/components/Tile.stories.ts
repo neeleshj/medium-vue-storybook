@@ -11,7 +11,7 @@ export enum TileState {
 
 export interface TileInterface {
   id: number;
-  updatedAt: Date;
+  updatedAt: Date | Number;
   state: TileState;
 }
 
