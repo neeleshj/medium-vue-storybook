@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Board Empty Board 1`] = `
+<div
+  class="board"
+>
+  <div
+    class="board__row"
+  >
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Board Not an empty Board 1`] = `
+<div
+  class="board"
+>
+  <div
+    class="board__row"
+  >
+    <button
+      class="tile tile--red"
+    >
+      
+  X
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile tile--blue"
+    >
+      
+  0
+
+    </button>
+    <button
+      class="tile tile--red"
+    >
+      
+  X
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+    <button
+      class="tile tile--red"
+    >
+      
+  X
+
+    </button>
+    <button
+      class="tile"
+    >
+      
+  
+
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Board Tile Empty Tile 1`] = `
+<button
+  class="tile"
+>
+  
+  
+
+</button>
+`;
+
+exports[`Storyshots Board Tile O Tile 1`] = `
+<button
+  class="tile tile--blue"
+>
+  
+  0
+
+</button>
+`;
+
+exports[`Storyshots Board Tile X Tile 1`] = `
+<button
+  class="tile tile--red"
+>
+  
+  X
+
+</button>
+`;
+
+exports[`Storyshots GameView Default 1`] = `
+<div
+  class="game"
+>
+  <div
+    class="text margin-bottom-4"
+  >
+    Get Ready To Play
+  </div>
+   
+  <div
+    class="board"
+  >
+    <div
+      class="board__row"
+    >
+      <button
+        class="tile tile--red"
+      >
+        
+  X
+
+      </button>
+      <button
+        class="tile"
+      >
+        
+  
+
+      </button>
+      <button
+        class="tile"
+      >
+        
+  
+
+      </button>
+      <button
+        class="tile tile--blue"
+      >
+        
+  0
+
+      </button>
+      <button
+        class="tile tile--red"
+      >
+        
+  X
+
+      </button>
+      <button
+        class="tile"
+      >
+        
+  
+
+      </button>
+      <button
+        class="tile"
+      >
+        
+  
+
+      </button>
+      <button
+        class="tile tile--red"
+      >
+        
+  X
+
+      </button>
+      <button
+        class="tile"
+      >
+        
+  
+
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Text Default 1`] = `
+<div
+  class="text"
+>
+  Get Ready To Play
+</div>
+`;
