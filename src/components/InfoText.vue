@@ -1,4 +1,4 @@
-//Text.vue
+//InfoText.vue
 <template>
   <div class="text">{{ data || 'No Data' }}</div>
 </template>

@@ -1,5 +1,4 @@
-//index.ts
-
+//State.ts
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 import { TileInterface } from '@/components/Tile.stories';
 import { BoardEmptyData } from '@/components/Board.stories';
